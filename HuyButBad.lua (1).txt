@@ -1,0 +1,425 @@
+
+wait(1)
+
+if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
+	local create = loadstring(game:HttpGet("https://raw.githubusercontent.com/cafehepho300/MaruCrack/main/Theme"))()
+	
+	local Window = create:Win("Maru Hub Premium Script")
+	local Tap1 = Window:Taps("General")
+    local Tap4 = Window:Taps("Combat")
+	local Tap2 = Window:Taps("Stats")
+	local Tap3 = Window:Taps("Teleport & Buy")
+	local Tap5 = Window:Taps("Dungeon")
+	local Tap6 = Window:Taps("Misc")
+	
+	local page1 = Tap1:newpage()
+	local page2 = Tap1:newpage()
+	local page3 = Tap2:newpage()
+	local page4 = Tap2:newpage()
+	local page5 = Tap3:newpage()
+	local page6 = Tap3:newpage()
+	local page7 = Tap5:newpage()
+	local page8 = Tap5:newpage()
+	local page9 = Tap4:newpage()
+	local page10 = Tap4:newpage()
+	local page11 = Tap6:newpage()
+	local page12 = Tap6:newpage()
+	
+
+spawn(function()
+	if _G.HideUi then
+		game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game.Players.LocalPlayer.Character.HumanoidRootPart)
+	end
+end)
+
+	if not _G.Marine or _G.Pirate then
+		spawn(function()
+			while wait() do
+				if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Visible == true then
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Size = UDim2.new(0, 10000, 0, 10000)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Position = UDim2.new(-4, 0, -5, 0)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.BackgroundTransparency = 1
+					wait(.5)
+					game:GetService'VirtualUser':Button1Down(Vector2.new(99,99))
+					game:GetService'VirtualUser':Button1Up(Vector2.new(99,99))
+				end     
+			end
+		end)
+	end
+
+	if _G.Marine then
+		spawn(function()
+			while wait() do
+				if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Visible == true then
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Size = UDim2.new(0, 10000, 0, 10000)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Position = UDim2.new(-4, 0, -5, 0)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.BackgroundTransparency = 1
+					wait(.5)
+					game:GetService'VirtualUser':Button1Down(Vector2.new(99,99))
+					game:GetService'VirtualUser':Button1Up(Vector2.new(99,99))
+				end
+			end
+		end)
+	end
+
+	if _G.Pirate then 
+		spawn(function()
+			while wait() do
+				if game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Visible == true then
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Size = UDim2.new(0, 10000, 0, 10000)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Position = UDim2.new(-4, 0, -5, 0)
+					game:GetService("Players")["LocalPlayer"].PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.BackgroundTransparency = 1
+					wait(.5)
+					game:GetService'VirtualUser':Button1Down(Vector2.new(99,99))
+					game:GetService'VirtualUser':Button1Up(Vector2.new(99,99))
+				end
+			end
+		end)
+	end
+
+	if _G.FPSBoost then
+		spawn(function()
+			wait(3)
+			local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+			local g = game
+			local w = g.Workspace
+			local l = g.Lighting
+			local t = w.Terrain
+			t.WaterWaveSize = 0
+			t.WaterWaveSpeed = 0
+			t.WaterReflectance = 0
+			t.WaterTransparency = 0
+			l.GlobalShadows = false
+			l.FogEnd = 9e9
+			l.Brightness = 0
+			settings().Rendering.QualityLevel = "Level01"
+			for i, v in pairs(g:GetDescendants()) do
+				if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then 
+					v.Material = "Plastic"
+					v.Reflectance = 0
+				elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+					v.Transparency = 1
+				elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+					v.Lifetime = NumberRange.new(0)
+				elseif v:IsA("Explosion") then
+					v.BlastPressure = 1
+					v.BlastRadius = 1
+				elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+					v.Enabled = false
+				elseif v:IsA("MeshPart") then
+					v.Material = "Plastic"
+					v.Reflectance = 0
+					v.TextureID = 10385902758728957
+				end
+			end
+			for i, e in pairs(l:GetChildren()) do
+				if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+					e.Enabled = false
+				end
+			end
+		end)
+	end
+
+	local placeId = game.PlaceId
+	Magnet = true
+	if placeId == 2753915549 then
+		OldWorld = true
+	elseif placeId == 4442272183 then
+		NewWorld = true
+	elseif placeId == 7449423635 then
+		ThreeWorld = true
+	end
+
+	_G.FarmSwiish = true
+	spawn(function()
+	    while wait() do
+		    pcall(function()
+			_G.FarmSwiish = true
+			wait(3)
+			_G.FarmSwiish = false
+			wait(3)
+			end)
+		end
+	end)
+
+
+	function Click()
+		game:GetService'VirtualUser':CaptureController()
+		game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+	end
+function CheckQuest()
+    local MyLevel = game.Players.LocalPlayer.Data.Level.Value
+    if OldWorld then
+        if MyLevel == 1 or MyLevel <= 9 then 
+            Ms = "Bandit [Lv. 5]"
+            NaemQuest = "BanditQuest1"
+            LevelQuest = 1
+            NameMon = "Bandit"
+            CFrameQuest = CFrame.new(1061.66699, 16.5166187, 1544.52905)
+            PosQuest = Vector3.new(1061.66699, 16.5166187, 1544.52905)
+            CFrameMon = CFrame.new(1199.31287, 52.2717781, 1536.91516)
+            PosMon = Vector3.new(1199.31287, 52.2717781, 1536.91516)
+        elseif MyLevel == 10 or MyLevel <= 14 then 
+            Ms = "Monkey [Lv. 14]"
+            NaemQuest = "JungleQuest"
+            LevelQuest = 1
+            NameMon = "Monkey"
+            CFrameQuest = CFrame.new(-1604.12012, 36.8521118, 154.23732)
+            PosQuest = Vector3.new(-1604.12012, 36.8521118, 154.23732)
+            CFrameMon = CFrame.new(-1772.4093017578, 60.860641479492, 54.872589111328)
+            PosMon = Vector3.new(-1772.4093017578, 60.860641479492, 54.872589111328)
+        elseif MyLevel == 15 or MyLevel <= 29 then 
+            Ms = "Gorilla [Lv. 20]"
+            NaemQuest = "JungleQuest"
+            LevelQuest = 2
+            NameMon = "Gorilla"
+            CFrameQuest = CFrame.new(-1604.12012, 36.8521118, 154.23732)
+            PosQuest = Vector3.new(-1604.12012, 36.8521118, 154.23732)
+            CFrameMon = CFrame.new(-1223.52808, 6.27936459, -502.292664)
+            PosMon = Vector3.new(-1223.52808, 6.27936459, -502.292664)
+        elseif MyLevel == 30 or MyLevel <= 39 then 
+            Ms = "Pirate [Lv. 35]"
+            NaemQuest = "BuggyQuest1"
+            LevelQuest = 1
+            NameMon = "Pirate"
+            CFrameQuest = CFrame.new(-1139.59717, 4.75205183, 3825.16211)
+            PosQuest = Vector3.new(-1139.59717, 4.75205183, 3825.16211)
+            CFrameMon = CFrame.new(-1219.32324, 4.75205183, 3915.63452)
+            PosMon = Vector3.new(-1219.32324, 4.75205183, 3915.63452)
+        elseif MyLevel == 40 or MyLevel <= 59 then 
+            Ms = "Brute [Lv. 45]"
+            NaemQuest = "BuggyQuest1"
+            LevelQuest = 2
+            NameMon = "Brute"
+            CFrameQuest = CFrame.new(-1139.59717, 4.75205183, 3825.1621)
+            PosQuest = Vector3.new(-1139.59717, 4.75205183, 3825.1621)
+            CFrameMon = CFrame.new(-1146.49646, 96.0936813, 4312.1333)
+            PosMon = Vector3.new(-1146.49646, 96.0936813, 4312.1333)
+        elseif MyLevel == 60 or MyLevel <= 74 then 
+            Ms = "Desert Bandit [Lv. 60]"
+            NaemQuest = "DesertQuest"
+            LevelQuest = 1
+            NameMon = "Desert Bandit"
+            CFrameQuest = CFrame.new(897.031128, 6.43846416, 4388.9716)
+            PosQuest = Vector3.new(897.031128, 6.43846416, 4388.9716)
+            CFrameMon = CFrame.new(932.788818, 6.4503746, 4488.24609)
+            PosMon = Vector3.new(932.788818, 6.4503746, 4488.24609)
+        elseif MyLevel == 75 or MyLevel <= 89 then 
+            Ms = "Desert Officer [Lv. 70]"
+            NaemQuest = "DesertQuest"
+            LevelQuest = 2
+            NameMon = "Desert Officer"
+            CFrameQuest = CFrame.new(897.031128, 6.43846416, 4388.9716)
+            PosQuest = Vector3.new(897.031128, 6.43846416, 4388.9716)
+            CFrameMon = CFrame.new(1580.03198, 4.61375761, 4366.86426)
+            PosMon = Vector3.new(1580.03198, 4.61375761, 4366.86426)
+        elseif MyLevel == 90 or MyLevel <= 99 then 
+            Ms = "Snow Bandit [Lv. 90]"
+            NaemQuest = "SnowQuest"
+            LevelQuest = 1
+            NameMon = "Snow Bandits"
+            CFrameQuest = CFrame.new(1384.14001, 87.272789, -1297.06482)
+            PosQuest = Vector3.new(1384.14001, 87.272789, -1297.06482)
+            CFrameMon = CFrame.new(1370.24316, 102.403511, -1411.52905)
+            PosMon = Vector3.new(1370.24316, 102.403511, -1411.52905)
+        elseif MyLevel == 100 or MyLevel <= 119 then 
+            Ms = "Snowman [Lv. 100]"
+            NaemQuest = "SnowQuest"
+            LevelQuest = 2
+            NameMon = "Snowman"
+            CFrameQuest = CFrame.new(1384.14001, 87.272789, -1297.06482)
+            PosQuest = Vector3.new(1384.14001, 87.272789, -1297.06482)
+            CFrameMon = CFrame.new(1370.24316, 102.403511, -1411.52905)
+            PosMon = Vector3.new(1370.24316, 102.403511, -1411.52905)
+        elseif MyLevel == 120 or MyLevel <= 149 then 
+            Ms = "Chief Petty Officer [Lv. 120]"
+            NaemQuest = "MarineQuest2"
+            LevelQuest = 1
+            NameMon = "Chief Petty Officer"
+            CFrameQuest = CFrame.new(-5035.0835, 28.6520386, 4325.29443)
+            PosQuest = Vector3.new(-5035.0835, 28.6520386, 4325.29443)
+            CFrameMon = CFrame.new(-4882.8623, 22.6520386, 4255.53516)
+            PosMon = Vector3.new(-4882.8623, 22.6520386, 4255.53516)
+        elseif MyLevel == 150 or MyLevel <= 174 then 
+            Ms = "Sky Bandit [Lv. 150]"
+            NaemQuest = "SkyQuest"
+            LevelQuest = 1
+            NameMon = "Sky Bandit"
+            CFrameQuest = CFrame.new(-4841.83447, 717.669617, -2623.96436)
+            PosQuest = Vector3.new(-4841.83447, 717.669617, -2623.96436)
+            CFrameMon = CFrame.new(-4970.74219, 294.544342, -2890.11353)
+            PosMon = Vector3.new(-4970.74219, 294.544342, -2890.11353)
+        elseif MyLevel == 175 or MyLevel <= 224 then 
+            Ms = "Dark Master [Lv. 175]"
+            NaemQuest = "SkyQuest"
+            LevelQuest = 2
+            NameMon = "Dark Master"
+            CFrameQuest = CFrame.new(-4841.83447, 717.669617, -2623.96436)
+            PosQuest = Vector3.new(-4841.83447, 717.669617, -2623.96436)
+            CFrameMon = CFrame.new(-5220.58594, 430.693298, -2278.17456)
+            PosMon = Vector3.new(-5220.58594, 430.693298, -2278.17456)
+        elseif MyLevel == 225 or MyLevel <= 274 then 
+            Ms = "Toga Warrior [Lv. 225]"
+            NaemQuest = "ColosseumQuest"
+            LevelQuest = 1
+            NameMon = "Toga Warrior"
+            CFrameQuest = CFrame.new(-1576.11743, 7.38933945, -2983.30762)
+            PosQuest = Vector3.new(-1576.11743, 7.38933945, -2983.30762)
+            CFrameMon = CFrame.new(-1779.97583, 44.6077499, -2736.35474)
+            PosMon = Vector3.new(-1779.97583, 44.6077499, -2736.35474)
+        elseif MyLevel == 275 or MyLevel <= 299 then 
+            Ms = "Gladiator [Lv. 275]"
+            NaemQuest = "ColosseumQuest"
+            LevelQuest = 2
+            NameMon = "Gladiato"
+            CFrameQuest = CFrame.new(-1576.11743, 7.38933945, -2983.30762)
+            PosQuest = Vector3.new(-1576.11743, 7.38933945, -2983.30762)
+            CFrameMon = CFrame.new(-1274.75903, 58.1895943, -3188.16309)
+            PosMon = Vector3.new(-1274.75903, 58.1895943, -3188.16309)
+        elseif MyLevel == 300 or MyLevel <= 329 then 
+            Ms = "Military Soldier [Lv. 300]"
+            NaemQuest = "MagmaQuest"
+            LevelQuest = 1
+            NameMon = "Military Soldier"
+            CFrameQuest = CFrame.new(-5316.55859, 12.2370615, 8517.2998)
+            PosQuest = Vector3.new(-5316.55859, 12.2370615, 8517.2998)
+            CFrameMon = CFrame.new(-5363.01123, 41.5056877, 8548.47266)
+            PosMon = Vector3.new(-5363.01123, 41.5056877, 8548.47266)
+        elseif MyLevel == 300 or MyLevel <= 374 then 
+            Ms = "Military Spy [Lv. 330]"
+            NaemQuest = "MagmaQuest"
+            LevelQuest = 2
+            NameMon = "Military Spy"
+            CFrameQuest = CFrame.new(-5316.55859, 12.2370615, 8517.2998)
+            PosQuest = Vector3.new(-5316.55859, 12.2370615, 8517.2998)
+            CFrameMon = CFrame.new(-5787.99023, 120.864456, 8762.25293)
+            PosMon = Vector3.new(-5787.99023, 120.864456, 8762.25293)
+        elseif MyLevel == 375 or MyLevel <= 399 then 
+            Ms = "Fishman Warrior [Lv. 375]"
+            NaemQuest = "FishmanQuest"
+            LevelQuest = 1
+            NameMon = "Fishman Warrior"
+            CFrameQuest = CFrame.new(61122.5625, 18.4716396, 1568.16504)
+            PosQuest = Vector3.new(61122.5625, 18.4716396, 1568.16504)
+            CFrameMon = CFrame.new(61163.8515625, 5.3073043823242, 1819.7841796875)
+            PosMon = Vector3.new(61163.8515625, 5.3073043823242, 1819.7841796875)
+        elseif MyLevel == 400 or MyLevel <= 449 then 
+            Ms = "Fishman Commando [Lv. 400]"
+            NaemQuest = "FishmanQuest"
+            LevelQuest = 2
+            NameMon = "Fishman Commando"
+            CFrameQuest = CFrame.new(61122.5625, 18.4716396, 1568.16504)
+            PosQuest = Vector3.new(61122.5625, 18.4716396, 1568.16504)
+            CFrameMon = CFrame.new(61163.8515625, 5.3073043823242, 1819.7841796875)
+            PosMon = Vector3.new(61163.8515625, 5.3073043823242, 1819.7841796875)
+        elseif MyLevel == 450 or MyLevel <= 474 then 
+            Ms = "God's Guard [Lv. 450]"
+            NaemQuest = "SkyExp1Quest"
+            LevelQuest = 1
+            NameMon = "God's Guards"
+            CFrameQuest = CFrame.new(-4721.71436, 845.277161, -1954.20105)
+            PosQuest = Vector3.new(-4721.71436, 845.277161, -1954.20105)
+            CFrameMon = CFrame.new(-4716.95703, 853.089722, -1933.925427)
+            PosMon = Vector3.new(-4716.95703, 853.089722, -1933.925427)
+        elseif MyLevel == 475 or MyLevel <= 524 then 
+            Ms = "Shanda [Lv. 475]"
+            NaemQuest = "SkyExp1Quest"
+            LevelQuest = 2
+            NameMon = "Shandas"
+            CFrameQuest = CFrame.new(-7863.63672, 5545.49316, -379.826324)
+            PosQuest = Vector3.new(-7863.63672, 5545.49316, -379.826324)
+            CFrameMon = CFrame.new(-7685.12354, 5601.05127, -443.171509)
+            PosMon = Vector3.new(-7685.12354, 5601.05127, -443.171509)
+        elseif MyLevel == 525 or MyLevel <= 549 then 
+            Ms = "Royal Squad [Lv. 525]"
+            NaemQuest = "SkyExp2Quest"
+            LevelQuest = 1
+            NameMon = "Royal Squad"
+            CFrameQuest = CFrame.new(-7902.66895, 5635.96387, -1411.71802)
+            PosQuest = Vector3.new(-7902.66895, 5635.96387, -1411.71802)
+            CFrameMon = CFrame.new(-7685.02051, 5606.87842, -1442.729)
+            PosMon = Vector3.new(-7685.02051, 5606.87842, -1442.729)
+        elseif MyLevel == 550 or MyLevel <= 624 then 
+            Ms = "Royal Soldier [Lv. 550]"
+            NaemQuest = "SkyExp2Quest"
+            LevelQuest = 2
+            NameMon = "Royal Soldier"
+            CFrameQuest = CFrame.new(-7902.66895, 5635.96387, -1411.71802)
+            PosQuest = Vector3.new(-7902.66895, 5635.96387, -1411.71802)
+            CFrameMon = CFrame.new(-7864.44775, 5661.94092, -1708.22351)
+            PosMon = Vector3.new(-7864.44775, 5661.94092, -1708.22351)
+        elseif MyLevel == 625 or MyLevel <= 649 then 
+            Ms = "Galley Pirate [Lv. 625]"
+            NaemQuest = "FountainQuest"
+            LevelQuest = 1
+            NameMon = "Galley Pirate"
+            CFrameQuest = CFrame.new(5254.60156, 38.5011406, 4049.69678)
+            PosQuest = Vector3.new(5254.60156, 38.5011406, 4049.69678)
+            CFrameMon = CFrame.new(5595.06982, 41.5013695, 3961.47095)
+            PosMon = Vector3.new(5595.06982, 41.5013695, 3961.47095)
+        elseif MyLevel >= 650 then 
+            Ms = "Galley Captain [Lv. 650]"
+            NaemQuest = "FountainQuest"
+            LevelQuest = 2
+            NameMon = "Galley Captain"
+            CFrameQuest = CFrame.new(5254.60156, 38.5011406, 4049.69678)
+            PosQuest = Vector3.new(5254.60156, 38.5011406, 4049.69678)
+            CFrameMon = CFrame.new(5658.5752, 38.5361786, 4928.93506)
+            PosMon = Vector3.new(5658.5752, 38.5361786, 4928.93506)
+        end
+    end
+    if NewWorld then
+        if MyLevel == 700 or MyLevel <= 724 then 
+            Ms = "Raider [Lv. 700]"
+            NaemQuest = "Area1Quest"
+            LevelQuest = 1
+            NameMon = "Raider"
+            CFrameQuest = CFrame.new(-424.080078, 73.0055847, 1836.91589)
+            PosQuest = Vector3.new(-424.080078, 73.0055847, 1836.91589)
+            CFrameMon = CFrame.new(-737.026123, 39.1748352, 2392.57959)
+            PosMon = Vector3.new(-737.026123, 39.1748352, 2392.57959)
+        elseif MyLevel == 725 or MyLevel <= 774 then 
+            Ms = "Mercenary [Lv. 725]"
+            NaemQuest = "Area1Quest"
+            LevelQuest = 2
+            NameMon = "Mercenary"
+            CFrameQuest = CFrame.new(-424.080078, 73.0055847, 1836.91589)
+            PosQuest = Vector3.new(-424.080078, 73.0055847, 1836.91589)
+            CFrameMon = CFrame.new(-973.731995, 95.8733215, 1836.46936)
+            PosMon = Vector3.new(-973.731995, 95.8733215, 1836.46936)
+        elseif MyLevel == 775 or MyLevel <= 874 then 
+            Ms = "Swan Pirate [Lv. 775]"
+            NaemQuest = "Area2Quest"
+            LevelQuest = 1
+            NameMon = "Swan Pirate"
+            CFrameQuest = CFrame.new(632.698608, 73.1055908, 918.666321)
+            PosQuest = Vector3.new(632.698608, 73.1055908, 918.666321)
+            CFrameMon = CFrame.new(970.369446, 142.653198, 1217.3667)
+            PosMon = Vector3.new(970.369446, 142.653198, 1217.3667)
+        elseif MyLevel == 875 or MyLevel <= 899 then 
+            Ms = "Marine Lieutenant [Lv. 875]"
+            NaemQuest = "MarineQuest3"
+            LevelQuest = 1
+            NameMon = "Marine Lieutenant"
+            CFrameQuest = CFrame.new(-2442.65015, 73.0511475, -3219.11523)
+            PosQuest = Vector3.new(-2442.65015, 73.0511475, -3219.11523)
+            CFrameMon = CFrame.new(-2913.26367, 73.0011826)
+            PosMon = Vector3.new(-2913.26367, 73.0011826)
+        elseif MyLevel == 900 or MyLevel <= 949 then 
+            Ms = "Marine Captain [Lv. 900]"
+            NaemQuest = "MarineQuest3"
+            LevelQuest = 2
+            NameMon = "Marine Captain"
+            CFrameQuest = CFrame.new(-2442.65015, 73.0511475, -3219.11523)
+            PosQuest = Vector3.new(-2442.65015, 73.0511475, -3219.11523)
+            CFrameMon = CFrame.new(-1868.67688, 73.0011826, -3321.66333)
+            PosMon = Vector3.new(-1868.67688, 73.0011826, -3321.66333)
+        elseif MyLevel == 950 or MyLevel <= 974 then 
+            Ms = "Zombie [Lv. 950]"
+            NaemQuest = "ZombieQuest"
+            LevelQuest = 1
+            NameMon = "Zombie"
+            CFrameQuest = CFrame.new(-5492.79395, 48.5151672, -793.710571)
+            PosQuest = Vector3.new(-5492.79395, 48.5151672, -793.710571)
+            CFrameMon = CFrame.new(-5634.83838, 126.067039, -697.665039)
+            PosMon = Vector3.new(-5634.83838, 126.
