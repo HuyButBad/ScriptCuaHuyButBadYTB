@@ -1,22 +1,22 @@
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vinh12eqweaws/vvvs/refs/heads/main/caz"))()
 local Window = redzlib:MakeWindow({
-  Title = "bt me gi dau",
-  SubTitle = "???",
+  Title = "Kho Script Roblox",
+  SubTitle = "Hỗ Trợ Nhiều Game Trong Roblox",
 })
 
 local AFKOptions = {}
 
 local Discord = Window:MakeTab({"Youtube", "video"})
 Discord:AddDiscordInvite({
-  Name = "////",
-  Description = "cc dumamay",
+  Name = "HuyButBad",
+  Description = "My Youtube",
   Logo = "rbxassetid://id ảnh",
   Invite = ""
 })
 local Discord = Window:MakeTab({"Facebook", "play"})
 Discord:AddDiscordInvite({
-  Name = "Duc Design",
-  Description = "cc dumamay",
+  Name = "My Server Discord",
+  Description = "Vô Để Cập Nhập Nhanh Thông Tin",
   Logo = "rbxassetid://id ảnh",
   Invite = "https://www.facebook.com/"
   })
